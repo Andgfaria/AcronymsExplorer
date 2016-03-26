@@ -10,6 +10,7 @@
 		654287081CA7089700726179 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 654287071CA7089700726179 /* MainViewController.m */; };
 		6542870C1CA7094900726179 /* Acronym.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542870B1CA7094900726179 /* Acronym.m */; };
 		654287101CA70CD400726179 /* SearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542870F1CA70CD400726179 /* SearchManager.m */; };
+		654287141CA71D8F00726179 /* AcronymsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 654287131CA71D8F00726179 /* AcronymsTableViewController.m */; };
 		65C99ABA1CA705ED00756ADA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C99AB91CA705ED00756ADA /* main.m */; };
 		65C99ABD1CA705ED00756ADA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C99ABC1CA705ED00756ADA /* AppDelegate.m */; };
 		65C99AC31CA705ED00756ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C99AC11CA705ED00756ADA /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 		6542870B1CA7094900726179 /* Acronym.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Acronym.m; sourceTree = "<group>"; };
 		6542870E1CA70CD400726179 /* SearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManager.h; sourceTree = "<group>"; };
 		6542870F1CA70CD400726179 /* SearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchManager.m; sourceTree = "<group>"; };
+		654287121CA71D8F00726179 /* AcronymsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymsTableViewController.h; sourceTree = "<group>"; };
+		654287131CA71D8F00726179 /* AcronymsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymsTableViewController.m; sourceTree = "<group>"; };
 		65C99AB51CA705ED00756ADA /* AcronymsExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcronymsExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C99AB91CA705ED00756ADA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		65C99ABB1CA705ED00756ADA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +109,17 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		654287111CA71CEE00726179 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				654287061CA7089700726179 /* MainViewController.h */,
+				654287071CA7089700726179 /* MainViewController.m */,
+				654287121CA71D8F00726179 /* AcronymsTableViewController.h */,
+				654287131CA71D8F00726179 /* AcronymsTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		65C99AAC1CA705ED00756ADA = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +143,7 @@
 		65C99AB71CA705ED00756ADA /* AcronymsExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				654287111CA71CEE00726179 /* Controllers */,
 				654287091CA7093500726179 /* Model */,
 				6542870D1CA70CAE00726179 /* Utils */,
 				65C99ABB1CA705ED00756ADA /* AppDelegate.h */,
@@ -138,8 +153,6 @@
 				65C99AC61CA705ED00756ADA /* LaunchScreen.storyboard */,
 				65C99AC91CA705ED00756ADA /* Info.plist */,
 				65C99AB81CA705ED00756ADA /* Supporting Files */,
-				654287061CA7089700726179 /* MainViewController.h */,
-				654287071CA7089700726179 /* MainViewController.m */,
 			);
 			path = AcronymsExplorer;
 			sourceTree = "<group>";
@@ -315,6 +328,7 @@
 				65C99ABD1CA705ED00756ADA /* AppDelegate.m in Sources */,
 				6542870C1CA7094900726179 /* Acronym.m in Sources */,
 				654287081CA7089700726179 /* MainViewController.m in Sources */,
+				654287141CA71D8F00726179 /* AcronymsTableViewController.m in Sources */,
 				654287101CA70CD400726179 /* SearchManager.m in Sources */,
 				65C99ABA1CA705ED00756ADA /* main.m in Sources */,
 			);

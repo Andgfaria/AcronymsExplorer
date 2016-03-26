@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <UISearchBarDelegate>
+
+@property (strong, nonatomic) IBOutlet UISearchBar *acronymsSearchBar;
+@property (strong, nonatomic) IBOutlet UIView *acronymsTableViewContainer;
+@property (strong, nonatomic) IBOutlet UILabel *infoLabel;
+
 
 @end
