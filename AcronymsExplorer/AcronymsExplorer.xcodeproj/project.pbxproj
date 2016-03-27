@@ -16,19 +16,8 @@
 		65C99AC31CA705ED00756ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C99AC11CA705ED00756ADA /* Main.storyboard */; };
 		65C99AC51CA705ED00756ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C99AC41CA705ED00756ADA /* Assets.xcassets */; };
 		65C99AC81CA705ED00756ADA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C99AC61CA705ED00756ADA /* LaunchScreen.storyboard */; };
-		65C99AD31CA705ED00756ADA /* AcronymsExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C99AD21CA705ED00756ADA /* AcronymsExplorerTests.m */; };
 		AF9E78542A655F97660FF5FD /* libPods-AcronymsExplorer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A45FEA688ECEE72B17AA6D9F /* libPods-AcronymsExplorer.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		65C99ACF1CA705ED00756ADA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65C99AAD1CA705ED00756ADA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 65C99AB41CA705ED00756ADA;
-			remoteInfo = AcronymsExplorer;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		654287061CA7089700726179 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -47,9 +36,6 @@
 		65C99AC41CA705ED00756ADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65C99AC71CA705ED00756ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65C99AC91CA705ED00756ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65C99ACE1CA705ED00756ADA /* AcronymsExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcronymsExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		65C99AD21CA705ED00756ADA /* AcronymsExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcronymsExplorerTests.m; sourceTree = "<group>"; };
-		65C99AD41CA705ED00756ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A45FEA688ECEE72B17AA6D9F /* libPods-AcronymsExplorer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AcronymsExplorer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63D1121063CAF2607807222 /* Pods-AcronymsExplorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymsExplorer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcronymsExplorer/Pods-AcronymsExplorer.debug.xcconfig"; sourceTree = "<group>"; };
 		F00FADAE59FE3A261838B285 /* Pods-AcronymsExplorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymsExplorer.release.xcconfig"; path = "Pods/Target Support Files/Pods-AcronymsExplorer/Pods-AcronymsExplorer.release.xcconfig"; sourceTree = "<group>"; };
@@ -61,13 +47,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF9E78542A655F97660FF5FD /* libPods-AcronymsExplorer.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65C99ACB1CA705ED00756ADA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				65C99AB71CA705ED00756ADA /* AcronymsExplorer */,
-				65C99AD11CA705ED00756ADA /* AcronymsExplorerTests */,
 				65C99AB61CA705ED00756ADA /* Products */,
 				1EEC4044674D441988F8A78B /* Pods */,
 				64CDA300429F1DDDB7C34AB6 /* Frameworks */,
@@ -135,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				65C99AB51CA705ED00756ADA /* AcronymsExplorer.app */,
-				65C99ACE1CA705ED00756ADA /* AcronymsExplorerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,15 +142,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		65C99AD11CA705ED00756ADA /* AcronymsExplorerTests */ = {
-			isa = PBXGroup;
-			children = (
-				65C99AD21CA705ED00756ADA /* AcronymsExplorerTests.m */,
-				65C99AD41CA705ED00756ADA /* Info.plist */,
-			);
-			path = AcronymsExplorerTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,24 +165,6 @@
 			productReference = 65C99AB51CA705ED00756ADA /* AcronymsExplorer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		65C99ACD1CA705ED00756ADA /* AcronymsExplorerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 65C99ADA1CA705ED00756ADA /* Build configuration list for PBXNativeTarget "AcronymsExplorerTests" */;
-			buildPhases = (
-				65C99ACA1CA705ED00756ADA /* Sources */,
-				65C99ACB1CA705ED00756ADA /* Frameworks */,
-				65C99ACC1CA705ED00756ADA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				65C99AD01CA705ED00756ADA /* PBXTargetDependency */,
-			);
-			name = AcronymsExplorerTests;
-			productName = AcronymsExplorerTests;
-			productReference = 65C99ACE1CA705ED00756ADA /* AcronymsExplorerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -226,10 +176,6 @@
 				TargetAttributes = {
 					65C99AB41CA705ED00756ADA = {
 						CreatedOnToolsVersion = 7.3;
-					};
-					65C99ACD1CA705ED00756ADA = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 65C99AB41CA705ED00756ADA;
 					};
 				};
 			};
@@ -247,7 +193,6 @@
 			projectRoot = "";
 			targets = (
 				65C99AB41CA705ED00756ADA /* AcronymsExplorer */,
-				65C99ACD1CA705ED00756ADA /* AcronymsExplorerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,13 +205,6 @@
 				65C99AC81CA705ED00756ADA /* LaunchScreen.storyboard in Resources */,
 				65C99AC51CA705ED00756ADA /* Assets.xcassets in Resources */,
 				65C99AC31CA705ED00756ADA /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65C99ACC1CA705ED00756ADA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,23 +272,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65C99ACA1CA705ED00756ADA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65C99AD31CA705ED00756ADA /* AcronymsExplorerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		65C99AD01CA705ED00756ADA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 65C99AB41CA705ED00756ADA /* AcronymsExplorer */;
-			targetProxy = 65C99ACF1CA705ED00756ADA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		65C99AC11CA705ED00756ADA /* Main.storyboard */ = {
@@ -480,30 +402,6 @@
 			};
 			name = Release;
 		};
-		65C99ADB1CA705ED00756ADA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = AcronymsExplorerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AGF.AcronymsExplorerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AcronymsExplorer.app/AcronymsExplorer";
-			};
-			name = Debug;
-		};
-		65C99ADC1CA705ED00756ADA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = AcronymsExplorerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AGF.AcronymsExplorerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AcronymsExplorer.app/AcronymsExplorer";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -521,15 +419,6 @@
 			buildConfigurations = (
 				65C99AD81CA705ED00756ADA /* Debug */,
 				65C99AD91CA705ED00756ADA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		65C99ADA1CA705ED00756ADA /* Build configuration list for PBXNativeTarget "AcronymsExplorerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				65C99ADB1CA705ED00756ADA /* Debug */,
-				65C99ADC1CA705ED00756ADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

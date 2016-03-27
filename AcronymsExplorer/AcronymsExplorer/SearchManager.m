@@ -15,32 +15,22 @@
 
 static NSString * const API_BASE_URL = @"http://www.nactem.ac.uk/software/acromine/dictionary.py";
 
-+(id) sharedManager {
-    static SearchManager *searchManager = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        searchManager = [[self alloc] init];
-    });
-    return searchManager;
-}
+/* This method makes a search request to the API with a given string.
+   After the request is fetched a completion handler is executed.
+   The completion handles receives 2 arguments: an integer represeting the outcome of the search and an array containing the search results.
+*/
 
--(id) init {
-    self = [super init];
-    return self;
-}
-
-+(NSString *) API_BASE_URL {
-    return API_BASE_URL;
-}
-
--(void) getAcronymsWithString:(NSString *)queryString andCompletionHandler:(void (^)(SearchResult,NSArray *))completionHandler {
++(void) getAcronymsWithString:(NSString *)queryString andCompletionHandler:(void (^)(SearchResult,NSArray *))completionHandler {
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
     [sessionManager  GET:API_BASE_URL parameters:@{ @"sf" : queryString } progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        // The API returns an array of JSONs, so we must check if the array is not empty
         if ([responseObject count] > 0) {
+            // We must also check if the first object is in the JSON form
             if ([responseObject[0] isKindOfClass:[NSDictionary class]]) {
                 NSArray *resultItems = responseObject[0][@"lfs"];
                 if (resultItems) {
+                    // Transform the JSON into an array of Acronym objects
                     NSMutableArray *acronymsArray = [NSMutableArray new];
                     for (NSDictionary *acronymData in resultItems) {
                         NSError *error;

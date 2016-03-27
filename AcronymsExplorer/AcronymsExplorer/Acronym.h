@@ -11,8 +11,10 @@
 @interface Acronym : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic,copy) NSString *longForm;
+// Number of occurrences
 @property (nonatomic, assign) NSUInteger frequency;
 @property (nonatomic, assign) NSUInteger sinceYear;
+// Array of Acronyms objects of possible variations, in case they exist
 @property (nonatomic, weak) NSArray *variations;
 
 @end

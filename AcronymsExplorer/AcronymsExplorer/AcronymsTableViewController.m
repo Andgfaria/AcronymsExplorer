@@ -17,10 +17,12 @@
 
 @synthesize acronyms = _acronyms;
 
+// Acronyms array getter
 -(NSArray *)acronyms{
     return _acronyms;
 }
 
+// Acronyms array setter
 -(void)setAcronyms:(NSArray *)acronyms {
     _acronyms = acronyms;
     [self.tableView reloadData];
@@ -28,11 +30,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Configure the table view so the cell heights are dinamically calculated
     self.tableView.estimatedRowHeight = 56;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    // Hide the empty rows
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
+// Adjust the content insets according to the device resoltuion and orientation
 -(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
     self.tableView.contentInset = (self.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular && self.view.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassRegular) ? UIEdgeInsetsMake(24, 0, 12, 0) : UIEdgeInsetsZero;
 }
@@ -42,7 +47,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _acronyms.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"acronymCell" forIndexPath:indexPath];

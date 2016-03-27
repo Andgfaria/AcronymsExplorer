@@ -1,5 +1,5 @@
 //
-//  Acronym.m
+//  MainViewController.m
 //  AcronymsExplorer
 //
 //  Created by André Gimenez Faria on 26/03/16.
@@ -10,6 +10,7 @@
 
 @implementation Acronym
 
+// Mantle method for mapping between the object properties and the JSON keys
 + (NSDictionary *) JSONKeyPathsByPropertyKey {
     return @{
              @"longForm" : @"lf",
@@ -19,6 +20,7 @@
              };
 }
 
+// Mapping of the variations property using an array of Acronym objects
 +(NSValueTransformer *) variationsJSONTransformer {
     return [MTLJSONAdapter arrayTransformerWithModelClass:Acronym.class];
 }
