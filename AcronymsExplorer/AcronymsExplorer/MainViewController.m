@@ -39,17 +39,18 @@ AcronymsTableViewController *acronymsTableViewController;
     [acronymsSearchBar becomeFirstResponder];
 }
 
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    // if the text is empty hide the UI components
+    if (searchText.length == 0) {
+        acronymsTableViewContainer.hidden = infoLabel.hidden = YES;
+    }
+}
+
+// Fetch the acronyms when the search button is clicked
 -(void) searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
-    // If the input text is not empty, make a search with it
-    if ([searchBar.text length] > 0) {
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        [self fetchAcronymsWithString:searchBar.text];
-    }
-    // If the input text is empty, clear the UI componentes
-    else {
-        infoLabel.hidden = acronymsTableViewContainer.hidden = YES;
-    }
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self fetchAcronymsWithString:searchBar.text];
 }
 
 // Method that gets the string from the search bar, makes an API request and show the results or an error message
