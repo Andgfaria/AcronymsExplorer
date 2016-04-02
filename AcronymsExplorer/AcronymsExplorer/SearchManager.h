@@ -17,6 +17,7 @@ typedef NS_ENUM(NSUInteger, SearchResult) {
 
 @interface SearchManager : NSObject
 
-+(void) getAcronymsWithString:(NSString *)queryString andCompletionHandler:(void (^)(SearchResult,NSArray *))completionHandler;
++(instancetype)sharedManager;
+-(void) getAcronymsWithString:(NSString *)queryString andCompletionHandler:(void (^)(SearchResult,NSArray *))completionHandler;
 
 @end

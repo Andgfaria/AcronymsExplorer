@@ -51,7 +51,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"acronymCell" forIndexPath:indexPath];
     cell.textLabel.text = [[(Acronym *) _acronyms[indexPath.row] longForm] capitalizedString];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu occurrences", (unsigned long)[(Acronym *) _acronyms[indexPath.row] frequency]];
+    NSInteger acronymFrequency = [(Acronym *) _acronyms[indexPath.row] frequency];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu %@", (unsigned long) acronymFrequency, acronymFrequency != 1 ? @"ocurrences" : @"ocurrence"];
     return cell;
 }
 

@@ -13,15 +13,36 @@
 
 @implementation SearchManager
 
+#pragma mark Singleton Methods
+
 static NSString * const API_BASE_URL = @"http://www.nactem.ac.uk/software/acromine/dictionary.py";
+AFHTTPSessionManager *sessionManager;
+
++(id) sharedManager {
+    static SearchManager *sharedManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedManager = [[self alloc] init];
+    });
+    return sharedManager;
+}
+
+-(id) init {
+    if (self = [super init]) {
+        sessionManager = [AFHTTPSessionManager manager];
+    }
+    return self;
+}
+
+#pragma mark Fetch Methods
+
 
 /* This method makes a search request to the API with a given string.
    After the request is fetched a completion handler is executed.
    The completion handles receives 2 arguments: an integer represeting the outcome of the search and an array containing the search results.
 */
 
-+(void) getAcronymsWithString:(NSString *)queryString andCompletionHandler:(void (^)(SearchResult,NSArray *))completionHandler {
-    AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+-(void) getAcronymsWithString:(NSString *)queryString andCompletionHandler:(void (^)(SearchResult,NSArray *))completionHandler {
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
     [sessionManager  GET:API_BASE_URL parameters:@{ @"sf" : queryString } progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         // The API returns an array of JSONs, so we must check if the array is not empty
@@ -31,26 +52,37 @@ static NSString * const API_BASE_URL = @"http://www.nactem.ac.uk/software/acromi
                 NSArray *resultItems = responseObject[0][@"lfs"];
                 if (resultItems) {
                     // Transform the JSON into an array of Acronym objects
-                    NSMutableArray *acronymsArray = [NSMutableArray new];
-                    for (NSDictionary *acronymData in resultItems) {
-                        NSError *error;
-                        [acronymsArray addObject:[MTLJSONAdapter modelOfClass:[Acronym class] fromJSONDictionary:acronymData error:&error]];
+                    NSError *error;
+                    NSArray *acronymsArray = [MTLJSONAdapter modelsOfClass:[Acronym class] fromJSONArray:resultItems error:&error];
+                    if (completionHandler) {
+                       completionHandler(Success,[NSArray arrayWithArray:acronymsArray]);
                     }
-                    return completionHandler(Success,[NSArray arrayWithArray:acronymsArray]);
+                    return;
                 }
-                return completionHandler(JSONError,nil);
+                if (completionHandler) {
+                    completionHandler(JSONError,nil);
+                }
+                return;
             }
             else {
-                return completionHandler(JSONError,nil);
+                if (completionHandler) {
+                    completionHandler(JSONError,nil);
+                }
+                return;
             }
         }
         else {
-            return completionHandler(NoResults,nil);
+            if (completionHandler) {
+                completionHandler(NoResults,nil);
+            }
+            return;
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        return completionHandler(ServerError,nil);
+        if (completionHandler) {
+            completionHandler(ServerError,nil);
+        }
+        return;
     }];
 }
-
 
 @end

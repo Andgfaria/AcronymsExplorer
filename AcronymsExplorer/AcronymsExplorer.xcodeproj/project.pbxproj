@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		654287081CA7089700726179 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 654287071CA7089700726179 /* MainViewController.m */; };
-		6542870C1CA7094900726179 /* Acronym.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542870B1CA7094900726179 /* Acronym.m */; };
-		654287101CA70CD400726179 /* SearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6542870F1CA70CD400726179 /* SearchManager.m */; };
-		654287141CA71D8F00726179 /* AcronymsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 654287131CA71D8F00726179 /* AcronymsTableViewController.m */; };
+		657B05BA1CAF43700029FB8A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 657B05B91CAF43700029FB8A /* MainViewController.m */; };
+		657B05BD1CAF437A0029FB8A /* AcronymsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 657B05BC1CAF437A0029FB8A /* AcronymsTableViewController.m */; };
+		657B05C01CAF43880029FB8A /* Acronym.m in Sources */ = {isa = PBXBuildFile; fileRef = 657B05BF1CAF43880029FB8A /* Acronym.m */; };
+		657B05C31CAF43980029FB8A /* SearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 657B05C21CAF43980029FB8A /* SearchManager.m */; };
 		65C99ABA1CA705ED00756ADA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C99AB91CA705ED00756ADA /* main.m */; };
 		65C99ABD1CA705ED00756ADA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C99ABC1CA705ED00756ADA /* AppDelegate.m */; };
 		65C99AC31CA705ED00756ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C99AC11CA705ED00756ADA /* Main.storyboard */; };
@@ -20,14 +20,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		654287061CA7089700726179 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		654287071CA7089700726179 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		6542870A1CA7094900726179 /* Acronym.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Acronym.h; sourceTree = "<group>"; };
-		6542870B1CA7094900726179 /* Acronym.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Acronym.m; sourceTree = "<group>"; };
-		6542870E1CA70CD400726179 /* SearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManager.h; sourceTree = "<group>"; };
-		6542870F1CA70CD400726179 /* SearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchManager.m; sourceTree = "<group>"; };
-		654287121CA71D8F00726179 /* AcronymsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymsTableViewController.h; sourceTree = "<group>"; };
-		654287131CA71D8F00726179 /* AcronymsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymsTableViewController.m; sourceTree = "<group>"; };
+		657B05B81CAF43700029FB8A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		657B05B91CAF43700029FB8A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		657B05BB1CAF437A0029FB8A /* AcronymsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymsTableViewController.h; sourceTree = "<group>"; };
+		657B05BC1CAF437A0029FB8A /* AcronymsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymsTableViewController.m; sourceTree = "<group>"; };
+		657B05BE1CAF43880029FB8A /* Acronym.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Acronym.h; sourceTree = "<group>"; };
+		657B05BF1CAF43880029FB8A /* Acronym.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Acronym.m; sourceTree = "<group>"; };
+		657B05C11CAF43980029FB8A /* SearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManager.h; sourceTree = "<group>"; };
+		657B05C21CAF43980029FB8A /* SearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchManager.m; sourceTree = "<group>"; };
 		65C99AB51CA705ED00756ADA /* AcronymsExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcronymsExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C99AB91CA705ED00756ADA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		65C99ABB1CA705ED00756ADA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,8 +73,8 @@
 		654287091CA7093500726179 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6542870A1CA7094900726179 /* Acronym.h */,
-				6542870B1CA7094900726179 /* Acronym.m */,
+				657B05BE1CAF43880029FB8A /* Acronym.h */,
+				657B05BF1CAF43880029FB8A /* Acronym.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -82,8 +82,8 @@
 		6542870D1CA70CAE00726179 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				6542870E1CA70CD400726179 /* SearchManager.h */,
-				6542870F1CA70CD400726179 /* SearchManager.m */,
+				657B05C11CAF43980029FB8A /* SearchManager.h */,
+				657B05C21CAF43980029FB8A /* SearchManager.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -91,10 +91,10 @@
 		654287111CA71CEE00726179 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				654287061CA7089700726179 /* MainViewController.h */,
-				654287071CA7089700726179 /* MainViewController.m */,
-				654287121CA71D8F00726179 /* AcronymsTableViewController.h */,
-				654287131CA71D8F00726179 /* AcronymsTableViewController.m */,
+				657B05B81CAF43700029FB8A /* MainViewController.h */,
+				657B05B91CAF43700029FB8A /* MainViewController.m */,
+				657B05BB1CAF437A0029FB8A /* AcronymsTableViewController.h */,
+				657B05BC1CAF437A0029FB8A /* AcronymsTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -264,10 +264,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				65C99ABD1CA705ED00756ADA /* AppDelegate.m in Sources */,
-				6542870C1CA7094900726179 /* Acronym.m in Sources */,
-				654287081CA7089700726179 /* MainViewController.m in Sources */,
-				654287141CA71D8F00726179 /* AcronymsTableViewController.m in Sources */,
-				654287101CA70CD400726179 /* SearchManager.m in Sources */,
+				657B05C31CAF43980029FB8A /* SearchManager.m in Sources */,
+				657B05BD1CAF437A0029FB8A /* AcronymsTableViewController.m in Sources */,
+				657B05C01CAF43880029FB8A /* Acronym.m in Sources */,
+				657B05BA1CAF43700029FB8A /* MainViewController.m in Sources */,
 				65C99ABA1CA705ED00756ADA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

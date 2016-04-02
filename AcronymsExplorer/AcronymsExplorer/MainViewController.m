@@ -35,6 +35,7 @@ AcronymsTableViewController *acronymsTableViewController;
 }
 
 -(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     // Make the search bar active when the view appears
     [acronymsSearchBar becomeFirstResponder];
 }
@@ -55,25 +56,23 @@ AcronymsTableViewController *acronymsTableViewController;
 
 // Method that gets the string from the search bar, makes an API request and show the results or an error message
 -(void) fetchAcronymsWithString:(NSString *)string {
-    [SearchManager getAcronymsWithString:string andCompletionHandler:^(SearchResult result, NSArray * acronyms) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (result == Success) {
-                infoLabel.hidden = YES;
-                acronymsTableViewController.acronyms = acronyms;
-                acronymsTableViewContainer.hidden = NO;
-            }
-            else if (result == NoResults) {
-                acronymsTableViewContainer.hidden = YES;
-                infoLabel.text = @"No Results";
-                infoLabel.hidden = NO;
-            }
-            else {
-                acronymsTableViewContainer.hidden = YES;
-                infoLabel.text = result == ServerError ? @"Server Error" : @"JSON Error";
-                infoLabel.hidden = NO;
-            }
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        });
+    [[SearchManager sharedManager] getAcronymsWithString:string andCompletionHandler:^(SearchResult result, NSArray * acronyms) {
+        if (result == Success) {
+            infoLabel.hidden = YES;
+            acronymsTableViewController.acronyms = acronyms;
+            acronymsTableViewContainer.hidden = NO;
+        }
+        else if (result == NoResults) {
+            acronymsTableViewContainer.hidden = YES;
+            infoLabel.text = @"No Results";
+            infoLabel.hidden = NO;
+        }
+        else {
+            acronymsTableViewContainer.hidden = YES;
+            infoLabel.text = result == ServerError ? @"Server Error" : @"JSON Error";
+            infoLabel.hidden = NO;
+        }
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
 

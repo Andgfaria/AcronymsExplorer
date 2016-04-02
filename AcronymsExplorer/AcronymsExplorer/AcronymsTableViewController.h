@@ -10,6 +10,6 @@
 
 @interface AcronymsTableViewController : UITableViewController
 
-@property NSArray *acronyms;
+@property (strong,atomic) NSArray *acronyms;
 
 @end
